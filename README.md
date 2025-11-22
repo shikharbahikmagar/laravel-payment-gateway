@@ -20,4 +20,4 @@ A simple and customizable Laravel payment integration package that allows develo
 Install via Composer:
 
 ```bash
-composer require your-vendor/payment-package
+composer require shikhar/laravel-payments
