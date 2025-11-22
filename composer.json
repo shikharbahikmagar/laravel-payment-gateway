@@ -1,0 +1,25 @@
+{
+    "name": "shikhar/laravel-payments",
+    "description": "A Laravel payment gateway package supporting Khalti & eSewa",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Shikhar\\Payments\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Shikhar\\Payments\\Providers\\PaymentServiceProvider"
+            ],
+            "aliases": {
+                "Payment": "Shikhar\\Payments\\Facades\\Payment"
+            }
+        }
+    },
+    "require": {
+        "php": ">=8.1",
+        "illuminate/support": ">=10.0"
+    }
+}
