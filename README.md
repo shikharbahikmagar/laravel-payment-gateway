@@ -1,4 +1,3 @@
-
 # Laravel Custom Payment Package
 
 A simple and customizable Laravel payment integration package that allows developers to easily process payments, verify transactions, and integrate multiple gateways with a clean and extensible architecture.
@@ -13,7 +12,7 @@ A simple and customizable Laravel payment integration package that allows develo
 - Fully extendable classes
 - Supports Laravel 9+
 
----
+
 
 ## 📦 Installation
 

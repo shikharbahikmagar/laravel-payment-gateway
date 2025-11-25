@@ -2,7 +2,7 @@
 
 return [
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Default Payment Gateway
     |--------------------------------------------------------------------------
@@ -12,9 +12,9 @@ return [
     |
     */
 
-    'default' => env('PAYMENT_DEFAULT', 'khalti'),
+  'default' => env('PAYMENT_DEFAULT', 'khalti'),
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Payment Gateway Credentials
     |--------------------------------------------------------------------------
@@ -23,18 +23,19 @@ return [
     |
     */
 
-    'gateways' => [
+  'gateways' => [
 
-        'khalti' => [
-            'public_key' => env('KHALTI_PUBLIC_KEY', ''),
-            'secret_key' => env('KHALTI_SECRET_KEY', ''),
-        ],
-
-        'esewa' => [
-            'merchant_id' => env('ESEWA_MERCHANT_ID', ''),
-            'secret_key' => env('ESEWA_SECRET_KEY', ''),
-        ],
-
+    'khalti' => [
+      'public_key' => env('KHALTI_PUBLIC_KEY', ''),
+      'secret_key' => env('KHALTI_SECRET_KEY', ''),
     ],
+
+    'esewa' => [
+      'form_url' => 'https://rc-epay.esewa.com.np/api/epay/main/v2/form',
+      'merchant_id' => env('ESEWA_MERCHANT_ID', 'EPAYTEST'),
+      'secret_key' => env('ESEWA_SECRET_KEY', '8gBm/:&EnhH.1/q'),
+    ],
+
+  ],
 
 ];
