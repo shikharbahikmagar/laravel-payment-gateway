@@ -6,8 +6,8 @@ use Illuminate\Support\Facades\Facade;
 
 class Payment extends Facade
 {
-    protected static function getFacadeAccessor()
-    {
-        return 'payment'; // This matches the singleton binding in the ServiceProvider
-    }
+  protected static function getFacadeAccessor(): string
+  {
+    return 'payment'; // This matches the singleton binding in the ServiceProvider
+  }
 }
