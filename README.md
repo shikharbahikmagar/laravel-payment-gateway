@@ -1,6 +1,6 @@
-# Laravel Payment Gateway (Esewa + Khalti)
+# Laravel-Payments
+Easily integrate eSewa & Khalti payments in your Laravel app – Made in Nepal by Shikhar
 
-A simple and extensible Laravel package to integrate Nepali payment gateways **Esewa** and **Khalti** using a single unified API with sandbox support.
 
 ---
 
