@@ -24,6 +24,8 @@ class EsewaGateway implements PaymentGatewayInterface
 
     $transactionUuid = $payload['transaction_uuid'] ?? uniqid();
     $productCode = $payload['product_code'];
+    $productServiceCharge = $payload['product_service_charge'] ?? 0;
+    $productDeliveryCharge = $payload['product_delivery_charge'] ?? 0;
 
     // Signed fields
 
@@ -44,8 +46,8 @@ class EsewaGateway implements PaymentGatewayInterface
       "total_amount" => $totalAmount,
       "transaction_uuid" => $transactionUuid,
       "product_code" => $productCode,
-      "product_service_charge" => 0,
-      "product_delivery_charge" => 0,
+      "product_service_charge" => $productServiceCharge,
+      "product_delivery_charge" => $productDeliveryCharge,
       "success_url" => $payload['success_url'],
       "failure_url" => $payload['failure_url'],
       "signed_field_names" => $signedFieldNames,
