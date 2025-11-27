@@ -20,3 +20,12 @@ Install via Composer:
 
 ```bash
 composer require shikhar/laravel-payments
+
+## Env variables
+
+
+ESEWA_SECRET_KEY="8gBm/:&EnhH.1/q"  ## Only For Testting
+ESEWA_MERCHANT_ID=EPAYTEST
+ESEWA_SUCCESS_URL=https://yourapp.com/esewa/success
+ESEWA_FAILURE_URL=https://yourapp.com/esewa/failure
+
