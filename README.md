@@ -43,7 +43,7 @@ return [
     'esewa' => [
       'form_url' => 'https://rc-epay.esewa.com.np/api/epay/main/v2/form',
       'merchant_id' => env('ESEWA_MERCHANT_ID', 'EPAYTEST'),
-      'secret_key' => env('ESEWA_SECRET_KEY', '8gBm/:&EnhH.1/q'),
+      'secret_key' => env('ESEWA_SECRET_KEY', '8gBm/:&EnhH.1/q'), 
     ],
 
   ],
@@ -174,7 +174,6 @@ config/
 - Publish `payments.php`  
 - Configure `.env`  
 - Inject `PaymentManager`  
-- Call:
 
 ```php
 $this->payment->via('esewa')->charge(100, $payload);
