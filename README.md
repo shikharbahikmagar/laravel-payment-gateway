@@ -79,6 +79,7 @@ use Shikhar\Payments\PaymentManager;
 
 class PaymentController extends Controller
 {
+
     public $payment;
 
     public function __construct(PaymentManager $payment)
@@ -88,25 +89,27 @@ class PaymentController extends Controller
 
     public function pay(Request $request)
     {
+
         $payload = [
             'tax_amount' => $request->input('tax_amount'),
-            'transaction_uuid' => $request->input('transaction_uuid'),
+            'transaction_uuid' => $request->input('transaction_uuid', uniqid()),
             'product_code' => $request->input('product_code'),
-            'customer_name' => $request->input('customer_name'),
-            'customer_email' => $request->input('customer_email'),
-            'customer_phone' => $request->input('customer_phone'),
+            'customer_name' => $request->input('customer_name', null),
+            'customer_email' => $request->input('customer_email', null),
+            'customer_phone' => $request->input('customer_phone', null),
             'success_url' => $request->input('success_url'),
             'failure_url' => $request->input('failure_url'),
         ];
 
+        // Charge via selected gateway
         $response = $this->payment
             ->via($request->payment_gateway)
             ->charge($request->amount, $payload);
 
-        return view('pay')->with(compact('response'));
+        // Return JSON or redirect as needed
+        return view('shikhar-payments::esewa', compact('response'));
     }
-}
-```
+}```
 
 ---
 
@@ -196,6 +199,6 @@ $this->payment->via('khalti')->charge(100, $payload);
 
 ## 📜 License
 
-MIT © Shikhar Bahik Magar
+MIT © Shikhar Bahik
 
 
