@@ -199,6 +199,6 @@ $this->payment->via('khalti')->charge(100, $payload);
 
 ## 📜 License
 
-MIT © Shikhar Bahik
+MIT © Shikhar Bahik Magar
 
 
