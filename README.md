@@ -1,5 +1,5 @@
 # Laravel-Payments
-Easily integrate eSewa & Khalti payments in your Laravel app – Made in Nepal by Shikhar
+Easily integrate eSewa & Khalti payments in your Laravel app
 
 
 ---
